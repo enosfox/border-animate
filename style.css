@@ -35,7 +35,6 @@
   content: '';
   border-bottom: var(--largura-borda) var(--line) var(--color-borda);
   position: absolute;
-  bottom: -5px;
   right: 0;
   bottom: 0;
   width:600%;
