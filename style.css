@@ -1,0 +1,86 @@
+:root{
+  --largura-borda: 2px;
+  --line: dashed;
+  --color-borda: red;
+
+  --largura: 400px;
+  --altura: 200px;
+  --padding-texto: 20px;
+}
+
+.box--primary {
+  width: var(--largura);
+  height: var(--altura);
+  margin: 10px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.text--content{
+  padding: var(--padding-texto)
+}
+
+.border--top--bottom:after {
+  content: '';
+  border-top: var(--largura-borda) var(--line) var(--color-borda);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:600%;
+  height:100%;
+  animation: top 13s linear infinite
+}
+
+.border--top--bottom:before {
+  content: '';
+  border-bottom: var(--largura-borda) var(--line) var(--color-borda);
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  bottom: 0;
+  width:600%;
+  height:100%;
+  animation: bottom 11s linear infinite
+}
+
+.border--left--right:after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 600%;
+  border-left: var(--largura-borda) var(--line) var(--color-borda);
+  animation: left 10s linear infinite;
+}
+
+.border--left--right:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 600%;
+  border-right: var(--largura-borda) var(--line) var(--color-borda);
+  animation: right 10s linear infinite
+}
+
+@keyframes top {
+  0%   {left:-200%;}
+  100% {left:0%;}
+}
+
+@keyframes bottom {
+  0%   {right:-200%;}
+  100% {right:0%;}
+}
+
+@keyframes left {
+  0%   {bottom:-200%;}
+  100% {bottom:0%;}
+}
+
+@keyframes right {
+  0%   {top:-200%;}
+  100% {top:0%;}
+}
